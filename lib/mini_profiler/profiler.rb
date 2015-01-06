@@ -501,7 +501,7 @@ module Rack
     # * you have disabled auto append behaviour throught :auto_inject => false flag
     # * you do not want script to be automatically appended for the current page. You can also call cancel_auto_inject
     def get_profile_script(env)
-      path     = "#{env['SCRIPT_NAME']}#{@config.base_url_path}"
+      path     = "#{root_url}"
 
       settings = {
        :path            => path,
